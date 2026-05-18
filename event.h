@@ -7,11 +7,11 @@ enum EventConf {
     EVENT_C__DEFAULT_MAX_HANDLERS = 64,	// subscribers
 };
 
-typedef void (*EventHandlerFunc)(void const*);
+typedef void (*EventHandlerFunc)(void*);
 
 void event__init(void);
 int event__subscribe(uint32_t event_id, EventHandlerFunc func);
 int event__unsubscribe(EventHandlerFunc func);
-int event__pub(uint32_t event_id, void const* data);
+int event__pub(uint32_t event_id, void* data);
 
 #endif

@@ -55,7 +55,7 @@ int event__unsubscribe(EventHandlerFunc const func) {
     return rc;
 }
 
-int event__pub(uint32_t const event_id, void const* const data) {
+int event__pub(uint32_t const event_id, void* const data) {
     int i = 0;
     int cnt = 0;
     
